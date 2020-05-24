@@ -1,14 +1,14 @@
 body {
-  background: #352f5b;
+  background: #3e7ee6;
 }
 .container {
   max-width: 400px;
 }
 input[type="text"],
 input[type="text"]:focus {
-  color: #fff;
+  color: #6d6e69;
   border: none;
-  background: rgba(0, 0, 0, 0.2);
+  background: #fff;
   max-width: 400px;
 }
 .todos li {
