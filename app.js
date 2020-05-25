@@ -3,10 +3,14 @@ const dateTime = document.querySelector(".date-time");
 const list = document.querySelector(".todos");
 const search = document.querySelector(".search input");
 
-const now = new Date();
-const date = now.toDateString();
+function displayTime() {
+  let now = new Date();
+  let date = now.toDateString();
+  let time = now.toLocaleTimeString();
+  dateTime.textContent = `${date}, ${time}`;
+}
 
-dateTime.innerHTML = `${date}`;
+const createClock = setInterval(displayTime, 1000);
 
 const generateTemplate = (todo) => {
   const html = `
