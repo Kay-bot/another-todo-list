@@ -2,6 +2,7 @@ const addForm = document.querySelector(".add");
 const dateTime = document.querySelector(".date-time");
 const list = document.querySelector(".todos");
 const search = document.querySelector(".search input");
+const empty = document.querySelector(".empty-state");
 
 function displayTime() {
   let now = new Date();
@@ -36,6 +37,11 @@ addForm.addEventListener("submit", (e) => {
 list.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
+  }
+  if (list.children.length === 0) {
+    empty.classList.remove("d-none");
+  } else {
+    return;
   }
 });
 
