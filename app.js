@@ -1,6 +1,13 @@
 const addForm = document.querySelector(".add");
+const dateTime = document.querySelector(".date-time");
 const list = document.querySelector(".todos");
 const search = document.querySelector(".search input");
+
+const now = new Date();
+const date = now.toDateString();
+
+dateTime.innerHTML = `${date}`;
+
 const generateTemplate = (todo) => {
   const html = `
     <li
